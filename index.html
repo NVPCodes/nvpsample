@@ -8,33 +8,17 @@
     <script src="/vendor/jquery/dist/jquery.js"></script>
      <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
      <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
-   
-  
-     
+    <base href="/"></>
 </head>
+
 <body>
-    <div ng-controller="nvpCtrl">
-    <h1>NVP Test app</h1>
-    <input ng-model="newUser"/>
-    <br />
-    <h2>Your name is {{newUser}}</h2>
-      <br /> 
-      <br />
-    <h2>First Name :  {{fname }} </h2> 
-    <h2>Last Name : {{lname}}</h2>
-  </div>
-  <br />
-  
-     <div ng-controller="githubCtrl">
-          <ul>
-             <li ng-repeat="user in users">
-                 <img  width="200" height="200 " src="user.avatar_url" >
-                 <a href='https://github.com/{{user.login}}'> {{user.login}} </a>
-             </li>
-            
-         </ul>
-    </div>
-    
+    <div>
+    <a href="/">Home</a>
+     <a href="/github">GitHub Users</a>
+      <a href="/nvp">NVP Names</a>
+     </div>
+     
+   <div ng-view></div>
         
     <script src="/vendor/angular/angular.js" ></script>
     <script src="/vendor/angular-route/angular-route.js"></script> 
