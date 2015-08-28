@@ -8,6 +8,5 @@ angular.module("nvpApp")
                     return response.data ;
                    
         })
-        }
-        
-    })
+    }
+})
