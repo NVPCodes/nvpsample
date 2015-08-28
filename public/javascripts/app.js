@@ -5,6 +5,11 @@ angular.module("nvpApp",[
 angular.module("nvpApp").config(function($routeProvider, $locationProvider) {
     
     $routeProvider
+
+        .when("/", {
+            controller : 'homeCtrl',
+            templateUrl: '/templates/home.html'
+        })
      
         .when("/github" , {
             controller: 'githubCtrl',
