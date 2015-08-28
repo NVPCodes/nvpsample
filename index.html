@@ -12,12 +12,35 @@
   
      
 </head>
-<body >
+<body>
+    <div ng-controller="nvpCtrl">
     <h1>NVP Test app</h1>
+    <input ng-model="newUser"/>
+    <br />
+    <h2>Your name is {{newUser}}</h2>
+      <br /> 
+      <br />
+    <h2>First Name :  {{fname }} </h2> 
+    <h2>Last Name : {{lname}}</h2>
+  </div>
+  <br />
+  
+     <div ng-controller="githubCtrl">
+          <ul>
+             <li ng-repeat="user in users">
+                 <img  width="200" height="200 " src="user.avatar_url" >
+                 <a href='https://github.com/{{user.login}}'> {{user.login}} </a>
+             </li>
+            
+         </ul>
+    </div>
     
-    
-<script src="/vendor/angular/angular.js" ></script>
+        
+    <script src="/vendor/angular/angular.js" ></script>
     <script src="/vendor/angular-route/angular-route.js"></script> 
-      <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/nvp/nvpController.js"></script>
+    <script src="/javascripts/github/githubController.js"></script>
+    <script src="/javascripts/github/githubService.js"></script>
 </body>
 </html>
