@@ -23,6 +23,7 @@ var favicon = require('serve-favicon');
 
 app.use(logger('dev'));
 
+// preload front end assets  
 app.use(express.static(path.join(__dirname, '/public')));
 
 
