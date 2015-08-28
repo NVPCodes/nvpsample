@@ -1,12 +1,23 @@
 var express = require("express");
 var logger =  require("morgan");
 
+require("./config/db").connect(function(err, conn){
+    if(err)
+        console.log(err);
+    else
+        console.log("connected");
+});
+
+
+
 var app = express();
 app.locals.pretty = true;
 
 var debug = require('debug')('my_app:server');
 
 var path = require('path');
+
+var Users = require("./models/user");
 
 var favicon = require('serve-favicon');
 
@@ -37,12 +48,17 @@ app.get('/', function (req, res) {
 
 app.get('/nvp', function (req, res) {
 
+    Users.find({}).then(function(_users){
+        res.send(_users);
+    });
+/**
+ * Test Data
     res.send({
-        names : [ {fname :'James', lname: 'Rawlins'} , {fname:'Anthony', lname: 'Jules'}]
+        [ {fname :'James', lname: 'Rawlins'} , {fname:'Anthony', lname: 'Jules'}]
 
 
     });
-
+*/
 })
 
 

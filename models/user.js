@@ -8,6 +8,6 @@ var userSchema = mongoose.Schema({
 });
 
 var User = mongoose.model("user", userSchema);
-User.index({fname : 1, lname: 1}, {unique : true});
+//User.index({fname : 1, lname: 1}, {unique : true});
 
 module.exports = User;

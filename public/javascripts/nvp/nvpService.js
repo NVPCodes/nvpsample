@@ -5,8 +5,8 @@ angular.module("nvpApp")
 
             return $http.get("/nvp")
                 .then(function (response) {
-                    console.log(response.data.names);
-                    return response.data.names;
+                    console.log(response.data);
+                    return response.data;
 
                 })
 
