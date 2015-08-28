@@ -27,12 +27,6 @@ var app = express();
 app.locals.pretty = true;
 
 
-
-
-// call routes via middleware
-app.use('/', baseRoute);
-app.use('/nvp', nvpUsers);
-
 app.use(logger('dev'));
 
 // preload front end assets  
@@ -42,7 +36,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/templates',express.static(path.join(__dirname, '/templates')));
 
 
-app.use('/api', require('./api'));
+
+// call routes via middleware
+app.use('/', baseRoute);
+app.use('/nvp', nvpUsers);
+
+
+
 
 // add routes here
 
