@@ -1,0 +1,32 @@
+{
+  "name": "nvp-sample",
+  "version": "1.0.0",
+  "description": "sample  node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NVPCodes/nvpsample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NVPCodes/nvpsample/issues"
+  },
+  "homepage": "https://github.com/NVPCodes/nvpsample",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "lodash-node": "^3.10.1",
+    "mongoose": "^4.1.3",
+    "q": "^1.4.1",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "morgan": "^1.6.1",
+    "nodemon": "^1.4.1"
+  }
+}
