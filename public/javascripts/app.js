@@ -1,6 +1,6 @@
 angular.module("nvpApp",[
     'ngRoute',
-    'lodash'
+   'ngLodash'
 ]);
 
 
