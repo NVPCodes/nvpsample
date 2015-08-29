@@ -10,11 +10,9 @@ var debug = require('debug')('my_app:server');
 
 var path = require('path');
 
-<<<<<<< HEAD
 
-=======
 var Users = require("./models/user");
->>>>>>> 1d0d05c2a8b37765b925bd87780ef58d43e6dcbb
+
 
 var favicon = require('serve-favicon');
 
@@ -42,18 +40,12 @@ app.use('/templates',express.static(path.join(__dirname, '/templates')));
 
 
 // call routes via middleware
-<<<<<<< HEAD
-//app.use('/', baseRoute);
-=======
-app.use('/', baseRoute);
->>>>>>> 1d0d05c2a8b37765b925bd87780ef58d43e6dcbb
+
 app.use('/nvp', nvpUsers);
 
 
 
 
-<<<<<<< HEAD
-// main Route
 
 app.get('/', function (req, res) {
 
@@ -67,9 +59,6 @@ app.get('/', function (req, res) {
 
     })
 })
-=======
-// add routes here
->>>>>>> 1d0d05c2a8b37765b925bd87780ef58d43e6dcbb
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
