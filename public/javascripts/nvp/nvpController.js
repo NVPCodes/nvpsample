@@ -11,6 +11,8 @@ angular.module("nvpApp")
         nvpSvc.getNvpNames()
             .then( function(names_){
                 var tempNames = [];
+                // example of functional programming using lodash library
+                // see difference from for loop below
                 lodash.forEach( names_, function(name){
                     tempNames.push( name.fname+' '+ name.lname)
                 });
