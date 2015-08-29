@@ -1,10 +1,11 @@
 angular.module("nvpApp")
-    .controller("nvpCtrl", function($scope,_,nvpSvc) {
+    .controller("nvpCtrl", function($scope,nvpSvc) {
         
-    $scope.newUser = '';
-    $scope.fname="James";
-    $scope.lname="Rawlins";
-
+        
+    $scope.fname="Test";
+    $scope.lname="Case";
+    
+    
     // send request to server otherwise server gets route specified in angular
         // /templates/nvp
         nvpSvc.getNvpNames()
@@ -15,6 +16,5 @@ angular.module("nvpApp")
                 }
                 $scope.names = tempNames;
             });
-
-
+    
 } )
