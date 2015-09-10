@@ -1,3 +1,6 @@
+(function () {
+
+
 angular.module("nvpApp",[
     'ngRoute',
    'ngLodash'
@@ -44,4 +47,6 @@ angular.module("nvpApp").run([
             console.log('Starting to leave %s to go to %s', currentPath, nextPath);
         });
     }
-]);
+])
+
+}());

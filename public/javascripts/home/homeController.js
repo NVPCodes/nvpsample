@@ -1,7 +1,10 @@
-angular.module("nvpApp")
-    .controller("homeCtrl", function($scope) {
+(function () {
 
-        $scope.msg = 'NVP Home Page'
+    angular.module("nvpApp")
+        .controller("homeCtrl", function($scope) {
+
+            $scope.msg = 'NVP Home Page'
 
 
-    } )
+        } )
+}());
