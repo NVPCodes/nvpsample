@@ -1,9 +1,9 @@
 (function () {
 
     angular.module("nvpApp")
-        .controller("homeCtrl", function($scope) {
-
-            $scope.msg = 'NVP Home Page'
+        .controller("homeController", function($scope) {
+            var vm = this;
+            vm.msg = 'NVP Home Page'
 
 
         } )

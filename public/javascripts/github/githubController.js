@@ -2,12 +2,12 @@
 
 
     angular.module("nvpApp")
-        .controller("githubCtrl", function($scope, githubSvc) {
-
+        .controller("githubController", function($scope, githubSvc) {
+         var vm = this;
 
          githubSvc.getUsers()
-            .then(function(users) {
-                $scope.users = users;
+            .then(function(users_) {
+                vm.users = users_;
             })
 
 

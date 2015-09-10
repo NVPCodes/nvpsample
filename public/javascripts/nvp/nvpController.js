@@ -2,11 +2,12 @@
 
 
     angular.module("nvpApp")
-        .controller("nvpCtrl", function($scope,lodash,nvpSvc) {
+        .controller("nvpController", function($scope,lodash,nvpSvc) {
 
+        var vm = this;
 
-        $scope.fname="Test";
-        $scope.lname="Case";
+        vm.fname="Test";
+        vm.lname="Case";
 
 
         // send request to server otherwise server gets route specified in angular
@@ -20,7 +21,7 @@
                         tempNames.push( name.fname+' '+ name.lname)
                     });
 
-                    $scope.names = tempNames;
+                    vm.names = tempNames;
                     /***
                     var tempNames = [];
                     for (i=0; i < names_.length;i++) {

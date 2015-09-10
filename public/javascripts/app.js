@@ -13,16 +13,19 @@ angular.module("nvpApp").config(function($routeProvider, $locationProvider) {
     $routeProvider
 
         .when("/", {
-            controller : 'homeCtrl',
+            controller : 'homeController',
+            controllerAs : 'homeCtrl',
             templateUrl: '/templates/home.html'
         })
      
         .when("/github" , {
-            controller: 'githubCtrl',
+            controller: 'githubController',
+            controllerAs: 'githubCtrl',
             templateUrl : '/templates/gitHubUsers.html'
         })
         .when('/nvp', {
-            controller: "nvpCtrl",
+            controller: "nvpController",
+            controllerAs: 'nvpCtrl',
             templateUrl: '/templates/nvpUsers.html'
         })
         .otherwise({
