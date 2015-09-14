@@ -9,28 +9,61 @@
      <script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
      <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
     <base href="/" >
+    <style>
+        .checkbac {
+            float: left;
+            width: 300px; height: 600px
+        }
+        .tabs {
+            float: left;
+        }
+        .well {
+            float: left;
+        }
+
+        .myGrid {
+            height: 100%;
+        }
+
+
+
+
+    </style>
 </head>
 
 <body>
-    <div>
-     <ul class="nav nav-tabs" >
-    <li><a href="/">Home</a></li>
-     <li><a href="/github">GitHub Users</a></li>
-      <li><a href="/nvp">NVP Names</a></li>
-      </ul>
+    <p>
+        <img class="checkbac" src="/images/checkbac.png" />
+    </p>
+    <div class="tabs">
+         <ul class="nav nav-tabs" >
+            <li><a href="/">Home</a></li>
+             <li><a href="/github">GitHub Users</a></li>
+              <li><a href="/nvp">NVP Names</a></li>
+             <li><a href="/demo">Demo</a></li>
+          </ul>
      </div>
      
    <div class ="well" ng-view></div>
 
 
+
     <script src="/vendor/angular/angular.js" ></script>
     <script src="/vendor/angular-route/angular-route.js"></script>
+
     <script src="/vendor/ng-lodash/build/ng-lodash.js"></script>
+
+    <script src="/vendor/ag-grid/dist/angular-grid.js"></script>
+    <link rel="stylesheet" type="text/css" href="/vendor/ag-grid/dist/angular-grid.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/ag-grid/dist/theme-fresh.css">
 
 
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/nvp/nvpService.js"></script>
     <script src="/javascripts/nvp/nvpController.js"></script>
+
+    <script src="/javascripts/demo/demoController.js"></script>
+    <script src="/javascripts/demo/demoCampaignModelService.js"></script>
 
     <script src="/javascripts/github/githubController.js"></script>
     <script src="/javascripts/github/githubService.js"></script>

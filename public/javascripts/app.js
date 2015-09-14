@@ -3,6 +3,7 @@
 
 angular.module("nvpApp",[
     'ngRoute',
+    'angularGrid',
    'ngLodash'
 ]);
 
@@ -27,6 +28,11 @@ angular.module("nvpApp").config(function($routeProvider, $locationProvider) {
             controller: "nvpController",
             controllerAs: 'nvpCtrl',
             templateUrl: '/templates/nvpUsers.html'
+        })
+        .when('/demo', {
+            controller: "demoController",
+            controllerAs: 'demoCtrl',
+            templateUrl: '/templates/demo.html'
         })
         .otherwise({
             template: "This route isn't valid"
