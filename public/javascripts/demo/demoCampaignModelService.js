@@ -30,8 +30,21 @@
 
             ];
 
+            var campaignModelTitles = [
+
+                { headerName: 'Name' , field:'name' },
+                { headerName: 'Description', field: 'description' },
+                { headerName: 'Manager', field: 'manager' },
+                { headerName: 'Inception', field: 'inception'}
+
+            ]
+
             service.getCampaignModel = function () {
                 return campaignModel;
+            };
+
+            service.getCampaignColumnTitles = function () {
+                return campaignModelTitles;
             }
         })
 

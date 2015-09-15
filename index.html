@@ -10,9 +10,12 @@
      <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css"/>
     <base href="/" >
     <style>
-        .checkbac {
+        .logo {
             float: left;
-            width: 300px; height: 600px
+
+        }
+        .checkbac {
+            width: 50%; height: 50%;
         }
         .tabs {
             float: left;
@@ -32,9 +35,7 @@
 </head>
 
 <body>
-    <p>
-        <img class="checkbac" src="/images/checkbac.png" />
-    </p>
+
     <div class="tabs">
          <ul class="nav nav-tabs" >
             <li><a href="/">Home</a></li>
@@ -43,6 +44,8 @@
              <li><a href="/demo">Demo</a></li>
           </ul>
      </div>
+
+
      
    <div class ="well" ng-view></div>
 

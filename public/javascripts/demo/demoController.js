@@ -3,21 +3,21 @@
     angular.module("nvpApp")
         .controller("demoController", function($scope,campaignModelService) {
             var vm = this;
-            var columnDefs = [
-                { headerName: 'Name' , field:'name' },
-                { headerName: 'Description', field: 'description' },
-                { headerName: 'Manager', field: 'manager' },
-                { headerName: 'Inception', field: 'inception'}
-            ];
+            vm.columnDefs =  campaignModelService.getCampaignColumnTitles();
 
             vm.campaignModel = campaignModelService.getCampaignModel();
 
             $scope.gridOptions = {
-                columnDefs : columnDefs,
+                columnDefs : vm.columnDefs,
                 rowData: vm.campaignModel,
+                enableColResize: true,
                 dontUseScrolls: true
 
             };
+            $scope.resize = function() {
+                $scope.gridOptions.api.sizeColumnsToFit();
+            };
+
 
 
         } )
