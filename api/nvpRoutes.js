@@ -10,6 +10,7 @@ var Users = require("../models/user");
 
 router.get('/', function (req, res) {
 
+
     Users.find({}).then(function(_users){
         res.send(_users);
     });
